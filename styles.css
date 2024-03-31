@@ -1,0 +1,117 @@
+/* Basic Reset */
+html, body, div, h1, h2, h3, h4, p, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 2vw;
+}
+
+a {
+    color: #0055A4; /* Sets the color of the link */
+    text-decoration: none; /* Removes the underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Adds an underline on hover for better user interaction */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #003366
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.75em;
+    color: #0055A4
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #5F7A99
+}
+
+h4 {
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+p {
+    margin-bottom: 1em;
+    margin-left: 10px;
+}
+
+/* Image Styles */
+img, video {
+    width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 70vw; /* Maximum width */
+    display: block;
+    margin: 0 auto 1em; /* Center images and add margin below */
+    border: 5px solid black;
+}
+
+.section-divider {
+    border-bottom: 1px solid #a2a2a2; /* Light line for separation */
+    margin: 20px 0; /* Add some space above and below the line */
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.comparison-table th,
+.comparison-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+.comparison-table th {
+    background-color: #f2f2f2;
+}
+.checkmark {
+    color: green;
+}
+.crossmark {
+    color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.75em;
+    }
+
+    h2 {
+        font-size: 1.25em;
+    }
+
+    body {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1, h2, h3 {
+        font-size: 1.1em;
+    }
+
+    .text-content {
+        padding: 10px;
+    }
+}

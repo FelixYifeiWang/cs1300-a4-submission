@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development -- Yifei Wang</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <h1>
+            Development
+        </h1>
+        <div class="text-content">
+            <p>
+                This project is a comprehensive exercise on the full pipeline to develop a list-based interface.
+                I'll start with making a competitive analysis on the favorating features of different websites.
+                Based on the learning from the analysis, I will design, develop, and deploy the interactive interface mainly based on React.
+            </p>
+        </div>
+    </div>
+    <div class="section-divider"></div>
+    <div>
+        <h2>
+            Part 1: Competitive Analysis
+        </h2>
+        <h3>
+            Selected websites:
+        </h3>
+        <p>
+            Spotify: <a href="https://open.spotify.com/" target="_blank">open.spotify.com</a> | YouTube: <a href="https://www.youtube.com/" target="_blank">www.youtube.com</a> | Netflix: <a href="https://www.netflix.com/" target="_blank">www.netflix.com</a> | Steam: <a href="https://store.steampowered.com/" target="_blank">store.steampowered.com</a>
+        </p>
+        <img src="1.JPEG" alt="Original Page">
+        <h3>
+            Competitive Comparison Chart:
+        </h3>
+        <table class="comparison-table">
+            <tr>
+              <th>Feature</th>
+              <th>Spotify</th>
+              <th>YouTube</th>
+              <th>Netflix</th>
+              <th>Steam</th>
+            </tr>
+            <tr>
+              <td>Favorating on Browsing Page</td>
+              <td class="checkmark">√</td>
+              <td class="checkmark">√</td>
+              <td class="checkmark">√</td>
+              <td class="crossmark">×</td>
+            </tr>
+            <tr>
+              <td>Add to Auto-play Queue</td>
+              <td class="checkmark">√</td>
+              <td class="checkmark">√</td>
+              <td class="crossmark">×</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Can Have Multiple Favorite Lists</td>
+              <td class="checkmark">√</td>
+              <td class="checkmark">√</td>
+              <td class="crossmark">×</td>
+              <td class="crossmark">×</td>
+            </tr>
+            <tr>
+              <td>Like/Dislike</td>
+              <td class="checkmark">√</td>
+              <td class="checkmark">√</td>
+              <td class="checkmark">√</td>
+              <td class="crossmark">×</td>
+            </tr>
+            <tr>
+              <td>Sort Favorite List</td>
+              <td class="crossmark">×</td>
+              <td class="checkmark">√</td>
+              <td class="crossmark">×</td>
+              <td class="checkmark">√</td>
+            </tr>
+            <tr>
+              <td>Filter Favorite List</td>
+              <td class="crossmark">×</td>
+              <td class="crossmark">×</td>
+              <td class="crossmark">×</td>
+              <td class="checkmark">√</td>
+            </tr>
+            <tr>
+              <td>Share Favorite List</td>
+              <td class="checkmark">√</td>
+              <td class="crossmark">×</td>
+              <td class="crossmark">×</td>
+              <td class="crossmark">×</td>
+            </tr>
+          </table>
+          
+        <h3>
+            Summary:
+        </h3>
+        <p>
+            When reviewing these four websites, I discovered clear patterns and differences regarding their user experience. 
+            Spotify is special because it offers almost all features except for sorting and filtering. 
+            The unique factor that only Spotify has is its function to share the favorite list, enabling users to share their tastes with others.
+            Similar to Spotify, YouTube also covers most features, except for filtering and sharing. 
+            It distinguishes itself from Spotify with its ability to sort the list.
+            Netflix has relatively very few features, limited to favorating while browsing and offering a like/dislike option.
+            Similarly, Steam also has few features. What makes it unique is its filtering option.
+        </p>
+        <p>
+            Using the principles from class, we can see these design choices actually make sense, primarily concerning the attention hierarchy. 
+            YouTube and Spotify are the most "classical" content platforms. 
+            Therefore, they require intensive list features to help users manage their content.
+            Spotify's success lies in placing more focus on the social aspect because music taste is highly shareable, whereas YouTube, as a more diverse user-generated-content platform, places more importance on sorting.
+            In contrast, Netflix is a more private streaming service, and the number of contents is not too large for users to manage.
+            Therefore, it does a good job of involving fewer extra features to enhance efficiency. 
+            Steam is more like a store, so many features simply don't make sense according to its user personas. For example, the like/dislike feature before purchase.
+            Since games can be categorized in more objective ways, a filtering feature is also successful.
+        </p>   
+        <h3>
+            My Implementation Planning:
+        </h3>
+        <p>
+            I'm planning to build a list-based game interface.
+            While the current design of Steam makes sense as a digital store, I think it's also a good idea to have a more lightweight, content-focused interface.
+            Not as a store with an additional shopping cart feature, but as a page for favoriting games.
+            Based on this idea, here's the list of features I'm considering adding:
+        </p>
+        <ul>
+            <li>Favoriting while Browsing</li>
+            <li>Naming the List</li>
+            <li>Filtering</li>
+            <li>Sorting</li>
+            <li>Sharing (if I find an easy solution)</li>
+        </ul>        
+    </div>
+    <div class="section-divider"></div>
+    <div>
+        <h2>
+            Part 2: Set Up
+        </h2>
+        <p>
+            This app is built mainly using React. Here's the Github link: <a href="https://github.com/FelixYifeiWang/favoriting-games" target="_blank">github.com/FelixYifeiWang/favoriting-games</a>
+        </p>    
+    </div>
+    <div class="section-divider"></div>
+    <div>
+        <h2>
+            Part 3: Functionality
+        </h2>
+        <h3>
+            App Intention:
+        </h3>
+        <p>
+            As mentioned above, this app is designed to enable gamers to make their favorite games into a list. Here's how I will incorporate different features:
+        </p>
+        <p>
+            <b>Filter:</b> Users can quickly find games they like by filtering by genre, ratings, or release dates. 
+        </p>
+        <p>
+            <b>Sort:</b> Once they have a list of games, they can arrange it however they want - by release dates, prices, IGN scores, or alphabetically.
+        </p>
+        <p>
+            <b>Aggregation:</b> Users can add games to their different lists (games' names and categories are listed), name these lists, and share them with others.
+        </p>
+    </div>
+    <div class="section-divider"></div>
+    <div>
+        <h2>
+            Part 4: Deployment
+        </h2>
+        <p>
+            During the development process, all features are finished as planned. The app is finally deployed using Vercel. Here's the website link: <a href="https://favoriting-games.vercel.app/" target="_blank">favoriting-games.vercel.app</a>
+        </p>   
+        <h3>
+            Main Page:
+        </h3>
+        <img src="2.png" alt="Main Page">
+        <h3>
+            Sharing Page:
+        </h3>
+        <img src="3.png" alt="Sharing Page"> 
+    </div>
+</body>
+</html>
